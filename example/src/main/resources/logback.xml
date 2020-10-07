@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <withJansi>true</withJansi>
+        <!-- @formatter:off -->
+        <encoder>
+            <pattern>
+                <![CDATA[%d{HH:mm:ss.SSS} [%10.10thread] %highlight(%-5.5level) %cyan(%30.30logger{30}) - %-50msg %white(%replace(%caller{1}){'Caller\+0\s+', ' '})]]></pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
