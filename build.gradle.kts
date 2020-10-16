@@ -94,7 +94,7 @@ subprojects {
 
     tasks.withType<Test> {
         useJUnitPlatform {
-            includeEngines("junit-jupiter", "junit-vintage")
+            includeEngines("junit-jupiter")
         }
     }
 
